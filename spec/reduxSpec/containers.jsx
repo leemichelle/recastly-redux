@@ -18,23 +18,23 @@ var store = createMockStore({
 }, {changeVideoList});
 
 describe('containers', function() {
-  describe('Nav Container', function() {
-    before(function () {
-      sinon.spy(store, 'dispatch');
-      component = shallowWithStore(<SearchContainer />, store);
-    });
-    beforeEach(function() {
-      store.dispatch.reset();
-    });
-    it('should have a prop called handleSearchInputChange which dispatches handleVideoSearch', function() {
-      component.props().handleSearchInputChange('kitten mittens');
-      expect(component.props().handleSearchInputChange).to.be.a('function');
-      expect(store.dispatch.callCount).to.equal(1);
-    });
-    it('should be created using the React-Redux connect method', function() {
-      expect(SearchContainer.name).to.equal('Connect');
-    });
-  });
+  // describe('Nav Container', function() {
+  //   before(function () {
+  //     sinon.spy(store, 'dispatch');
+  //     component = shallowWithStore(<SearchContainer />, store);
+  //   });
+  //   beforeEach(function() {
+  //     store.dispatch.reset();
+  //   });
+  //   it('should have a prop called handleSearchInputChange which dispatches handleVideoSearch', function() {
+  //     component.props().handleSearchInputChange('kitten mittens');
+  //     expect(component.props().handleSearchInputChange).to.be.a('function');
+  //     expect(store.dispatch.callCount).to.equal(1);
+  //   });
+  //   it('should be created using the React-Redux connect method', function() {
+  //     expect(SearchContainer.name).to.equal('Connect');
+  //   });
+  // });
   describe('Video List Container', function() {
     before(function () {
       component = shallowWithStore(<VideoListContainer />, store);
