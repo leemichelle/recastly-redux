@@ -5,6 +5,7 @@ import Nav from './Nav.js';
 import changeVideo from '../actions/currentVideo.js';
 import changeVideoList from '../actions/videoList.js';
 import handleVideoSearch from '../actions/search.js';
+import store from '../store/store.js';
 
 
 export default class App extends React.Component {
@@ -13,7 +14,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    () => (handleVideoSearch('dancing monkeys'))
+    store.dispatch(handleVideoSearch('dancing monkeys'))
   }
 
   render() {

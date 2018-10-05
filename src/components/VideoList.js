@@ -8,7 +8,7 @@ var VideoList = (props) => (
         <VideoListEntry
           key={video.etag}
           video={video}
-          handleVideoListEntryTitleClick={(event) => props.handleVideoListEntryTitleClick(event)}
+          handleVideoListEntryTitleClick={props.handleVideoListEntryTitleClick}
         />
       ))
     }

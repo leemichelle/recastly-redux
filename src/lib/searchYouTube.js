@@ -13,10 +13,7 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
       }
     })
     .fail(({responseJSON}) => {
-      // console.log('error', responseJSON);
-      // // responseJSON.error.errors.forEach((err) =>
-      // //   console.error(err)
-      // );
+      console.log('ERROR')
     });
 };
 
